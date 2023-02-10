@@ -19,14 +19,14 @@
 		SET_DEFAULT(会给外键设置默认值)<br>
 		
 **这是图书表与出版社表的代码和数据库**
-![ForeignKey](img\ForeignKey.png)
-![book](img\book.png)
+![ForeignKey](img/ForeignKey.png)
+![book](img/book.png)
 
 **这是作者表与作者详情的代码和数据库**
-![author](img\author.png)
-![OneToOneField](img\OneToOneField.png)
+![author](img/author.png)
+![OneToOneField](img/OneToOneField.png)
 
 **这是图书表与作者表的代码和数据库**
-![book_authors](img\book_authors.png)
-![ManyToManyField](img\ManyToManyField.png)
+![book_authors](img/book_authors.png)
+![ManyToManyField](img/ManyToManyField.png)
 

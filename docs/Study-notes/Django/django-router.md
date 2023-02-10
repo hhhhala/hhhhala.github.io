@@ -129,12 +129,12 @@ from django.shortcuts import reverse
 	+:1个或多个
 	{n}:匹配n个前面的表达式
 	():对表达式进行分组
-	\w:匹配字母数字下划线
-	\W:匹配非字母数字下划线
-	\d:匹配任意数字[0-9]
-	\D:匹配非数字
-	\s:匹配空白字符
-	\S:匹配非空字符
+	/w:匹配字母数字下划线
+	/W:匹配非字母数字下划线
+	/d:匹配任意数字[0-9]
+	/D:匹配非数字
+	/s:匹配空白字符
+	/S:匹配非空字符
 ```
 re模块是python提供正则表达式功能的
 ```	python
@@ -150,8 +150,8 @@ re模块是python提供正则表达式功能的
 
 #### 无名分组
 ```	python
-	re_path('test/(\d+)', views.test)												# 单个参数
-    re_path('test/(\d+)/(\d+)/(\d+)', views.test)									# 多个参数
+	re_path('test/(/d+)', views.test)												# 单个参数
+    re_path('test/(/d+)/(/d+)/(/d+)', views.test)									# 多个参数
 	# 正则匹配会将括号内的内容当作位置参数传递给视图函数
 -----------------------------------------------------------------------view.py
     def test(request, x):															# 接收单个参数
@@ -162,7 +162,7 @@ re模块是python提供正则表达式功能的
 ​	**反向解析(无名分组)**
 
 ```	python
-	re_path('test/(\d+)', views.test, name='xxx')
+	re_path('test/(/d+)', views.test, name='xxx')
 ```
 ``` html
 	<!-- 前端反向解析 -->
@@ -177,8 +177,8 @@ from django.shortcuts import reverse
 #### 有名分组
 
 ```	python
-	re_path('(?P<year>\d+)/', views.test)											# 单个参数
-    re_path('(?P<year>\d+)/(?P<mouth>\d+)/(?P<day>\d+)/', views.test)				# 多个参数
+	re_path('(?P<year>/d+)/', views.test)											# 单个参数
+    re_path('(?P<year>/d+)/(?P<mouth>/d+)/(?P<day>/d+)/', views.test)				# 多个参数
 	# 有名分组时将括号内正则匹配到的内容当作关键字参数传递给视图函数
 -----------------------------------------------------------------------view.py
     def test(request, year):
@@ -189,7 +189,7 @@ from django.shortcuts import reverse
 ​	**反向解析(有名分组)**
 
 ```	python
-	re_path('(?P<year>\d+)/', views.test, name='yyy')												
+	re_path('(?P<year>/d+)/', views.test, name='yyy')												
 ```
 ``` html
 	<!-- 前端反向解析 -->

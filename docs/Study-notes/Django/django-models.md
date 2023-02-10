@@ -6,8 +6,8 @@
 
 传递类名时，模板语法也会帮你加括号调用，实例化得到一个对象。
  数据取值可以通过**句点符**获取，不管是索引还是键都可以。<br>
-![models](img\models.png)
-![models-view](img\models-view.png)
+![models](img/models.png)
+![models-view](img/models-view.png)
 *模板语法不能给函数传参，模板语法不支持给函数传参*
 
 
@@ -29,14 +29,14 @@ from django.utils.sagestring import mark_safe
 	html = "<h1>hello</h1>"
 	res = mark_safe(html)
 ```
-![filter](img\filter.png)
-![filter-view](img\filter-view.png)
+![filter](img/filter.png)
+![filter-view](img/filter-view.png)
 
 #### 标签
 **for循环：**专属变量名*forloop* （endfor结束）
 **if：**条件语句				（endif结束）
-![tag](img\tag.png)
-![tag-view](img\tag-view.png)
+![tag](img/tag.png)
+![tag-view](img/tag-view.png)
 
 ### 自定义
 ``` python
@@ -59,8 +59,8 @@ from django.utils.sagestring import mark_safe
 	def test(a, b, c, d):
     	return '%s-%s-%s-%s' %(a, b, c, d)
 ```
-![custom-modes](img\custom-modes.png)
-![custom-modes-view](img\custom-modes-view.png)
+![custom-modes](img/custom-modes.png)
+![custom-modes-view](img/custom-modes-view.png)
 
 ####  自定义inclusion_tag
 ``` python
@@ -79,8 +79,8 @@ from django.utils.sagestring import mark_safe
     {% endfor %}
 </ul>
 ```
-![inclusion_tag](img\inclusion_tag.png)
-![inclusion_tag-view](img\inclusion_tag-view.png)
+![inclusion_tag](img/inclusion_tag.png)
+![inclusion_tag-view](img/inclusion_tag-view.png)
 *当html页面某一个地方需要传递参数才能动态渲染出来，并且很多页面都需要用到这些数据，就可以搓成inclusion_tag的形式*
 
 ### 模板继承
@@ -88,8 +88,8 @@ from django.utils.sagestring import mark_safe
 如果需要需要修改某块内容，可以提前划分好区域：<br>
 {% block 区域名 %}<br>
 {% endblock %}<br>
-![extends](img\extends.png)
-![extends-view](img\extends-view.png)
+![extends](img/extends.png)
+![extends-view](img/extends-view.png)
 
 ``` html
 <head>

@@ -35,12 +35,8 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-    - content.action.edit
-    - content.action.view
   language: zh # 一些提示性的文字会变成中文
   icon:
-    edit: material/pencil 
-    view: material/eye
     repo: fontawesome/brands/github
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 repo_url: https://github.com/hhhhala/hhhhala.github.io/ # 右上角点击跳转的链接

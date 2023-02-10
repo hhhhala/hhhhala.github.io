@@ -1,6 +1,6 @@
 # 项目文件夹/文件说明
 
-# ![django-project](img\django-project.png)
+# ![django-project](img/django-project.png)
 
 **demo02:**项目文件夹<br>
 **app01/app02:**应用文件夹<br>

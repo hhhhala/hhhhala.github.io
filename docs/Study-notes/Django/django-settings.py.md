@@ -13,9 +13,9 @@
 **ROOT_URLCONF:**用于配置根级URL（项目同名文件下的urls.py）<br>
 **TEMPLATES:** html文件存放路径配置<br>
 **DATABASES:**项目指定数据库<br>
-![databases](img\databases.png)<br>
+![databases](img/databases.png)<br>
 **STATIC_URL:**静态文件路由前缀 <br>
-![static](img\static.png)<br>
+![static](img/static.png)<br>
 **STATICFILES_DIRS:**静态文件配置<br>
-![staticfiles-dirs](img\staticfiles-dirs.png)
+![staticfiles-dirs](img/staticfiles-dirs.png)
 

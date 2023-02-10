@@ -19,7 +19,7 @@ def index(request):
     dict1 = {'username': 'hhhh', 'password':'123456'}
     return HttpResponse(dict1)
 ```
-![python-data](img\python-data.png)<br>
+![python-data](img/python-data.png)<br>
 2、导入json模块使用dunps转换数据传递给前端
 ```	python
 from django.shortcuts import render, HttpResponse
@@ -29,7 +29,7 @@ def index(request):
     json_str = json.dumps(dict1, ensure_ascii=False)	# 将python数据转换为JSON字符串,ensure_ascii取消转码
     return HttpResponse(json_str)
 ```
-![json-data](img\json-data.png)<br>
+![json-data](img/json-data.png)<br>
 3、导入JsonResponse模块进行转换数据传递给前端
 
 ```	python
@@ -39,7 +39,7 @@ def index(request):
     dict1 = {'username': 'hhhh', 'password':'123456'}
     return JsonResponse(dict1)
 ```
-![JsonResponse](img\JsonResponse.png)<br>
+![JsonResponse](img/JsonResponse.png)<br>
 **form表单上传文件以及后端获取**<br>
 1.method必须指定位post<br>
 2.enctype必须换成multiparty/form-data<br>
@@ -48,6 +48,6 @@ def index(request):
 enctype就是encodetype就是编码类型的意思<br>
 multipart/form-data是指表单数据由多个部分构成，既有文本数据，又有文件等二进制格式的数据<br>
 默认情况下，enctype的值时’application/x-www-form-urlencoded‘,不能用于文件上传只能上传文本格式的数据
-![multipartform-data](img\multipartform-data.png)
-![request.FILES](img\request.FILES.png)
-![multiValueDict](img\multiValueDict.png)
+![multipartform-data](img/multipartform-data.png)
+![request.FILES](img/request.FILES.png)
+![multiValueDict](img/multiValueDict.png)

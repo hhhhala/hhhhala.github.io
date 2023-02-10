@@ -14,8 +14,8 @@ install_as_MySQLdb()
 ```
 
 选择数据库(databases)，选数据源(Data Source)mysql
-![mysql](img\mysql.png)
-![pycharm-mysql-connetion](img\pycharm-mysql-connetion.png)
+![mysql](img/mysql.png)
+![pycharm-mysql-connetion](img/pycharm-mysql-connetion.png)
 
 正常填写主机、端口、用户、密码、库名，之后点击测试链接，测试成功点击确定即可。
 
@@ -23,7 +23,7 @@ install_as_MySQLdb()
 
 进入setting.py配置文件
 **DATABASES:**项目指定数据库
-![databases](img\databases.png)
+![databases](img/databases.png)
 
 
 
@@ -32,7 +32,7 @@ install_as_MySQLdb()
 #### 创建表
 
 在models.py里配置<br>
-![create-table](img\create-table.png)
+![create-table](img/create-table.png)
 
 #### 数据库迁移
 
@@ -46,5 +46,5 @@ install_as_MySQLdb()
 ```
 
 迁移之后会多出很多的表，这些事django默认需要的。<br>
-![migrate](img\migrate.png)<br>
+![migrate](img/migrate.png)<br>
 **住！只有修改了models.py中跟数据相关的代码，就必须重复执行数据迁移两条命令**
