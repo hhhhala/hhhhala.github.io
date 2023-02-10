@@ -6,7 +6,7 @@
 pip install django==2.2.12
 # 安装2.2.12版本的django
 ```
-![install-django](img\install-django.png)
+![install-django](.\img\install-django.png)
 
 查看是否安装成功
 ```python
