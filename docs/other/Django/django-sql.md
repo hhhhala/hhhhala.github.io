@@ -1,14 +1,44 @@
 # django-数据库
 
 ## models.py操作
-**models.CharField(max_length=32)：**存放字符串字段<br>
-**models.IntegerField()：**存放整形字段<br>
-**models.DateField()和DatetimeField()：**存放年月日<br>
-	*两个重要参数*<br>
+
+#### 字段
+**models.AutoField():**自动增长的IntegerField.通常不指定，django会自动创建一个<br>
+**models.BooleanField():**布尔值字段，值为True或False<br>
+**models.NullBooleanField():**值为Null，True或False<br>
+**models.CharField(max_length=32)：**存放字符串字段，max_length表示最大字符数<br>
+**models.TextField():**存放大文本字段，一般超过几千字符的时候使用<br>
+**models.IntegerField()：**存放整形字段(范围有限，不能存手机号)<br>
+**models.DecimalField():**浮点数，max_digits表示总位数，decimal_places小位数<br>
+**models.FloatField():**浮点型<br>
+**models.DateField():**年月日<br>
+**models.TimeField():**时间<br>
+**models.DatetimeField()：**日期时间<br>
+	*三个时间方法的两个重要参数*<br>
 		auto_now:每次操作数据时，该字段自动更新当前事件<br>
 		auto_now_add:在创建数据时候自动创建时间记录，之后手动修改才会改变<br>
+		两个参数互斥<br>
+**models.FileField():**上传文件
+**models.ImageField():**继承FileField，对上传的文件进行校验，确保是图片
+**models.EmailField():**邮箱字段（在数据库中就是varchar(255)）
 
-## 数据库操作方法：
+#### 字段参数
+null:表示某个字段可以为空
+default:设置默认值
+unique:字段唯一  -- true/false 默认false
+db_column:字段名称，如果未定，则使用属性名称
+db_index:若为True，则在表中为字段创建索引(下标)
+primary_key:主键(True)
+
+#### 关系字段
+ForeignKey:外键，参数
+	to:要关联的标，
+	to_field:要关联的字段
+	on_delete:当删除关联表种的数据时，当前表与关联表的行为，一般用models.CASCADE
+OneToOneField:一对一字段，参数同ForeignKey
+MantToMantField:多对多字段，为自动创建第三张表
+
+## orm数据库操作方法：
 **all()：**查询所有的数据<br>
 **get()：**直接拿数据对象，不存在则报错<br>
 **filter()：**带有过滤条件的查询 - 返回queryset对象<br>

@@ -2,17 +2,20 @@ site_name: hhhhala
 site_url: http://example.com/
 
 nav:
-  - 学习笔记: 
+  - 前端:
+    - Nodejs:
+
+  - 其他: 
       - Django: 
-        - 项目文件夹文件说明: Study-notes/Django/file-description.md
-        - django-settings.py配置介绍: Study-notes/Django/django-settings.py.md
-        - django搭建: Study-notes/Django/django-build.md
-        - django orm 中创建关系表: Study-notes/Django/django-orm.md
-        - django路由层: Study-notes/Django/django-router.md
-        - django视图层: Study-notes/Django/django-view.md
-        - django模板层: Study-notes/Django/django-models.md
-        - django数据库的配置: Study-notes/Django/django-sqlos.md
-        - django数据库的操作: Study-notes/Django/django-sql.md
+        - 项目文件夹文件说明: other/Django/file-description.md
+        - django-settings.py配置介绍: other/Django/django-settings.py.md
+        - django搭建: other/Django/django-build.md
+        - django orm 中创建关系表: other/Django/django-orm.md
+        - django路由层: other/Django/django-router.md
+        - django视图层: other/Django/django-view.md
+        - django模板层: other/Django/django-models.md
+        - django数据库的配置: other/Django/django-sqlos.md
+        - django数据库的操作: other/Django/django-sql.md
   - 项目:
       - 通用后台管理系统:
         - Project/index.md
